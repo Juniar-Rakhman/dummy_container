@@ -1,0 +1,12 @@
+version: "3.6"
+
+services:
+  dummy:
+    build: .
+    image: asimovo-dummy:test
+    container_name: asimovo-dummy 
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:9001:9001"
+      - "127.0.0.1:9002:9002"
+      - "127.0.0.1:9003:9003"
